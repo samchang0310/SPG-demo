@@ -19,7 +19,7 @@ const count = ref(0)
         </p>
       </div>
       <div class="flex justify-center">
-        <img src="/info-img.png" alt="" class="w-full md:w-[360px] h-auto" />
+        <img src="/info-img.png" alt="" class="w-full md:w-[600px] h-auto" />
       </div>
     </div>
   </div>
