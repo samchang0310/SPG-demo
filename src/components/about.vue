@@ -38,7 +38,7 @@ const count = ref(0)
       <!-- 文字區塊 -->
       <div class="px-2 md:px-[70px] grid gap-4 md:gap-[20px]">
         <p class="text-2xl md:text-[30px] font-semibold">{{ t('about.title') }}</p>
-        <p class="text-start text-base md:text-lg">
+        <p class="text-start text-base md:text-lg flex justify-center">
           {{ t('about.desc') }}
         </p>
       </div>
