@@ -1,5 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 defineProps({
   msg: String,
@@ -23,6 +27,27 @@ const items = [
   }
 ]
 const count = ref(0)
+
+onMounted(async () => {
+  await nextTick()
+  const cards = document.querySelectorAll('.feature-animate')
+  gsap.set(cards, { opacity: 0, y: 40 })
+  cards.forEach((el, idx) => {
+    gsap.to(el, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      delay: idx * 0.15,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+        // markers: true // debug用可開啟
+      }
+    })
+  })
+})
 </script>
 
 <template>
@@ -35,7 +60,7 @@ const count = ref(0)
         <div
           v-for="(item, idx) in items"
           :key="idx"
-          class="w-full rounded-lg overflow-hidden bg-white shadow"
+          class="feature-animate w-full rounded-lg overflow-hidden bg-white shadow"
         >
           <img :src="item.img" alt="" class="w-full h-auto object-cover">
           <div class="p-4 md:p-[20px] flex gap-2 md:gap-[10px] flex-col">
