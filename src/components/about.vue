@@ -62,7 +62,7 @@ onMounted(async () => {
     <div class="w-full max-w-[1100px] mx-auto flex justify-center py-8 md:py-[50px] px-4 md:px-[70px] text-center flex-col gap-10 md:gap-[40px]">
       <!-- 文字區塊 -->
       <div class="px-2 md:px-[70px] grid gap-4 md:gap-[20px]">
-        <p class="text-2xl md:text-[30px] font-semibold">{{ t('about.title') }}</p>
+        <p class="text-2xl md:text-3xl font-semibold">{{ t('about.title') }}</p>
         <p class="text-start text-base md:text-lg flex justify-center">
           {{ t('about.desc') }}
         </p>
@@ -76,9 +76,9 @@ onMounted(async () => {
         >
           <div class="gap-4 flex flex-col justify-center items-center w-full">
             <img :src="item.icon" alt="" class="w-[40px] h-[40px]" />
-            <div class="text-lg md:text-lg font-bold mb-1">{{ t(item.titleKey) }}</div>
+            <div class="text-base md:text-base font-bold mb-1">{{ t(item.titleKey) }}</div>
           </div>
-          <div class="text-base md:text-base">{{ t(item.descKey) }}</div>
+          <div class="text-base md:text-base font-light">{{ t(item.descKey) }}</div>
         </div>
       </div>
     </div>

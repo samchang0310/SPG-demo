@@ -26,7 +26,7 @@ function setLocale(l) {
       </div>
 
       <!-- 中間：桌機選單（只在 md 以上顯示） -->
-      <div class="hidden md:flex gap-[20px] items-center">
+      <div class="hidden md:flex gap-10 items-center font-bold text-[#232323]">
         <a href="#about" @click.prevent="smoothScrollTo('about',50)" class="hover:text-[#54AF8F] transition">{{ t('menu.about') }}</a>
         <a href="#introduction" @click.prevent="smoothScrollTo('introduction',50)" class="hover:text-[#54AF8F] transition">{{ t('menu.introduction') }}</a>
         <a href="#feature" @click.prevent="smoothScrollTo('feature',50)" class="hover:text-[#54AF8F] transition">{{ t('menu.feature') }}</a>

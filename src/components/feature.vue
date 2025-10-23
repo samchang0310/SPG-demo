@@ -54,7 +54,7 @@ onMounted(async () => {
   <div class="w-full min-h-[400px] md:h-[630px] bg-[#E7EAF0] scroll-mt-[100px]" id="feature">
     <div class="w-full max-w-[1100px] mx-auto flex justify-center py-8 md:py-[70px] px-4 md:px-[70px] text-center flex-col gap-10 md:gap-[40px]">
       <div class="px-2 md:px-[70px]">
-        <p class="text-2xl md:text-[30px] font-semibold text-[#232323]">产品特色</p>
+        <p class="text-2xl md:text-3xl font-semibold text-[#232323]">产品特色</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         <div
@@ -64,8 +64,8 @@ onMounted(async () => {
         >
           <img :src="item.img" alt="" class="w-full h-auto object-cover">
           <div class="p-4 md:p-[20px] flex gap-2 md:gap-[10px] flex-col">
-            <p class="text-[#54AF8F] text-base md:text-lg font-bold">{{ item.title }}</p>
-            <p class="text-[#343434] text-sm md:text-base">
+            <p class="text-[#54AF8F] text-lg md:text-lg font-bold">{{ item.title }}</p>
+            <p class="text-[#343434] text-base md:text-base text-start">
               {{ item.desc }}
             </p>
           </div>

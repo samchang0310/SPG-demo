@@ -42,7 +42,7 @@ onMounted(() => {
           </p>
         </div>
         <a
-          href="#"
+          href="#contact"
           class="w-fit bg-transparent hover:bg-[#69E0CE] px-6 md:px-[28px] py-3 md:py-[13px] text-[#69E0CE] hover:text-white border-[#69E0CE] border-1 bg-maincolor-30 rounded-full transition-all duration-300 ease-in-out text-base md:text-lg"
         >
           取得联系
