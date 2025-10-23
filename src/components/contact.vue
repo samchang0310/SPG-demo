@@ -9,7 +9,7 @@ const contactItems = [
   { img: '/linkedin.png', label: 'LinkedIn', value: '敬請期待' }
 ]
 
-const FORM_ENDPOINT = 'https://formspree.io/f/mzzjlyvp' // ← 保留或換成你的 endpoint
+const FORM_ENDPOINT = 'https://formspree.io/f/xjkaqdwp' // ← 套件連結
 
 const form = reactive({
   name: '',
