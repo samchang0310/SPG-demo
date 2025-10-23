@@ -37,8 +37,8 @@ function setLocale(l) {
       <div class="flex items-center gap-4">
         <!-- 語言按鈕（桌機） -->
         <div class="relative hidden md:block">
-          <button @click="showLangDropdown = !showLangDropdown" class="py-2 px-4 border rounded-full flex items-center gap-2">
-            <span>{{ locale === 'zh' ? '中文' : 'EN' }}</span>
+          <button @click="showLangDropdown = !showLangDropdown" class="py-2 px-4 text-[#232323] focus:text-[#54AF8F] border border-[#D6D6D6] focus:border-[#54AF8F] rounded-full flex items-center gap-2 ">
+            <span>{{ locale === 'zh' ? '简体中文' : 'English' }}</span>
             <!-- chevron (會依 showLangDropdown 旋轉) -->
             <svg
               class="w-4 h-4 transform transition-transform duration-150"
@@ -50,9 +50,9 @@ function setLocale(l) {
               <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
-          <div v-if="showLangDropdown" class="absolute right-0 mt-2 bg-white border rounded shadow">
-            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100" @click="setLocale('zh')">中文</button>
-            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100" @click="setLocale('en')">English</button>
+          <div v-if="showLangDropdown" class="absolute right-0 mt-2 bg-white border border-[#D6D6D6]  rounded-[8px] shadow w-full">
+            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 text-[#232323] hover:text-[#54AF8F]" @click="setLocale('zh')">简体中文</button>
+            <button class="block w-full text-left px-4 py-2 hover:bg-gray-100 text-[#232323] hover:text-[#54AF8F]" @click="setLocale('en')">English</button>
           </div>
         </div>
 
@@ -80,7 +80,7 @@ function setLocale(l) {
         <div class="w-full flex justify-center">
           <div class="relative">
             <button @click="showLangDropdown = !showLangDropdown" class="py-2 px-5 border rounded-full flex items-center gap-2.5">
-              <p>{{ locale === 'zh' ? '中文' : 'EN' }}</p>
+              <p>{{ locale === 'zh' ? '简体中文' : 'EN' }}</p>
               <svg
                 class="w-4 h-4 transform transition-transform duration-150"
                 :class="showLangDropdown ? 'rotate-180' : ''"
@@ -91,8 +91,8 @@ function setLocale(l) {
                 <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <div v-if="showLangDropdown" class="absolute left-1/2 -translate-x-1/2 mt-2 bg-white border rounded shadow">
-              <button class="block w-full text-left px-4 py-2 hover:bg-gray-100" @click="setLocale('zh')">中文</button>
+            <div v-if="showLangDropdown" class="absolute left-1/2 -translate-x-1/2 mt-2 bg-white border rounded-[8px] shadow w-full">
+              <button class="block w-full text-left px-4 py-2 hover:bg-gray-100" @click="setLocale('zh')">简体中文</button>
               <button class="block w-full text-left px-4 py-2 hover:bg-gray-100" @click="setLocale('en')">English</button>
             </div>
           </div>
