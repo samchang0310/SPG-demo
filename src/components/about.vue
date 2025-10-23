@@ -39,17 +39,20 @@ onMounted(async () => {
   await nextTick()
   const items = document.querySelectorAll('.about-animate')
   gsap.set(items, { opacity: 0, y: 40 })
-  gsap.to(items, {
-    opacity: 1,
-    y: 0,
-    duration: 0.8,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: items[0], // 以第一個 item 為觸發點
-      start: 'top 80%',
-      toggleActions: 'play none none none'
-      // markers: true
-    }
+  items.forEach((el, idx) => {
+    gsap.to(el, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      delay: idx * 0.15,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: items[0], // 以第一個 item 為觸發點
+        start: 'top 80%',
+        toggleActions: 'play none none none',
+        // markers: true
+      }
+    })
   })
 })
 </script>
@@ -58,7 +61,7 @@ onMounted(async () => {
   <div class="bg-white h-auto scroll-mt-[100px]" id="about">
     <div class="w-full max-w-[1100px] mx-auto flex justify-center py-8 md:py-[50px] px-4 md:px-[70px] text-center flex-col gap-10 md:gap-[40px]">
       <!-- 文字區塊 -->
-      <div class="about-animate px-2 md:px-[70px] grid gap-4 md:gap-[20px]">
+      <div class="px-2 md:px-[70px] grid gap-4 md:gap-[20px]">
         <p class="text-2xl md:text-[30px] font-semibold">{{ t('about.title') }}</p>
         <p class="text-start text-base md:text-lg flex justify-center">
           {{ t('about.desc') }}

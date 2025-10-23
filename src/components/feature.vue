@@ -41,7 +41,7 @@ onMounted(async () => {
       ease: 'power2.out',
       scrollTrigger: {
         trigger: el,
-        start: 'top 80%',
+        start: 'top 98%',
         toggleActions: 'play none none none'
         // markers: true // debug用可開啟
       }
